@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Button from "@material-ui/core/Button";
-import Input from "@material-ui/core/Input";
-import InputLabel from "@material-ui/core/InputLabel";
-import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
 import Box from "@material-ui/core/Box";
 import AddSharpIcon from "@material-ui/icons/AddSharp";
@@ -26,15 +23,14 @@ class EnterProtester extends Component {
     };
   }
 
-  componentDidMount = async() => {
+  componentDidMount = async () => {
 
-    if(this.props.contract)
-    {
+    if (this.props.contract) {
       console.log("hey")
       const users = await this.props.contract.methods
         .totalUsers
         .call({ from: this.props.accounts[0] });
-        ;
+      ;
       console.log(users);
     }
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -76,7 +72,7 @@ class EnterProtester extends Component {
         const userid = await this.props.contract.methods
           .addUser(this.state.encrypting_key, this.state.verifying_key, resURL[0].hash)
           .call({ from: this.props.accounts[0] })
-          console.log(userid)
+        console.log(userid)
         await this.props.contract.methods
           .addUser(this.state.encrypting_key, this.state.verifying_key, resURL[0].hash)
           .send({ from: this.props.accounts[0] })
@@ -144,9 +140,7 @@ class EnterProtester extends Component {
             </h1>
 
             <form>
-              {/* <InputLabel htmlFor="protester-name" style={{ fontSize: "13px" }}>
-            
-          </InputLabel> */}
+             
               <TextField
                 id="protester-id"
                 value={this.state.key}
@@ -184,16 +178,6 @@ class EnterProtester extends Component {
             <div style={{ height: "20px" }}></div>
           </Box>
 
-          {/* <Snackbar
-        anchorOrigin={{ vertical, horizontal }}          
-          open={this.state.openAlert}
-          autoHideDuration={6000}
-          onClose={this.handleClose}
-        >
-          <Alert onClose={this.handleClose} severity="success">
-            Protester's public key added!
-          </Alert>
-        </Snackbar> */}
         </React.Fragment>
         <div style={{ height: "20px" }}></div>
       </div>

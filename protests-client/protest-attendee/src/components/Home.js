@@ -1,13 +1,6 @@
 import React, { Component } from "react";
-import axios from "axios";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import Input from "@material-ui/core/Input";
-import InputLabel from "@material-ui/core/InputLabel";
 import QRCode from "react-qr-code";
 
 export default class Home extends Component {

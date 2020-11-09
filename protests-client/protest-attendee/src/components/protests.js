@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import Paper from "@material-ui/core/Paper";
 import ListItem from "@material-ui/core/ListItem";
-import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Dialog from "@material-ui/core/Dialog";

@@ -133,7 +133,7 @@ class App extends Component {
                   <PersonAddIcon style={{ color: "#ffffff" }} />
                 </IconButton>
               </a>
-              <a href="https://github.com/riyasingh0799/PCH-Private-Protests">
+              <a href="https://github.com/riyasingh0799/Post-Covid-Hack-2020">
                 <IconButton
                   color="white"
                   component="span"
